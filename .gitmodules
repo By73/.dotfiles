@@ -1,0 +1,6 @@
+[submodule "zsh/prezto"]
+	path = zsh/prezto
+	url = https://github.com/By73/prezto.git
+[submodule "vim-settings/vim/bundle/vim-colors-solarized"]
+	path = vim-settings/vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
