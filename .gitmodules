@@ -10,6 +10,3 @@
 [submodule "xorg/aw/lain"]
 	path = xorg/aw/lain
 	url = https://github.com/copycat-killer/lain.git
-[submodule "env-settings/powerline"]
-	path = env-settings/powerline
-	url = https://github.com/Lokaltog/powerline.git
