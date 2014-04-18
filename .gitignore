@@ -9,7 +9,7 @@ private/
 # vim
 #####
 
-vim-settings/vim/backups/
+env-settings/vim/backups/
 
 ########
 # Python
