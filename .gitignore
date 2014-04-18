@@ -3,12 +3,13 @@
 #########
 
 *.pv
+private/
 
 #####
 # vim
 #####
 
-vimconfig/vim/backups/*
+vim-settings/vim/backups/
 
 ########
 # Python
