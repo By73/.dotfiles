@@ -15,3 +15,7 @@ setopt EXTENDED_GLOB
 for rcfile in $PREZTO/runcoms/^README.md(.N); do
   ln -sf "$rcfile" "$HOME/.${rcfile:t}"
 done
+
+# theme for Awesome wm
+# ln -s $DIR/xorg/aw $HOME/.config/awesome/
+

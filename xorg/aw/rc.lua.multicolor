@@ -14,8 +14,8 @@ local wibox     = require("wibox")
 local beautiful = require("beautiful")
 local naughty   = require("naughty")
 local drop      = require("scratchdrop")
+local lain      = require("lain")
 -- }}}
-
 
 -- {{{ Error handling
 if awesome.startup_errors then
@@ -36,8 +36,7 @@ do
         in_error = false
     end)
 end
--- }}} end Error handling
-
+-- }}}
 
 -- {{{ Autostart applications
 function run_once(cmd)
@@ -51,8 +50,7 @@ end
 
 run_once("urxvtd")
 run_once("unclutter")
--- }}} end Autostart applications
-
+-- }}}
 
 -- {{{ Variable definitions
 -- localization
@@ -64,13 +62,13 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/multicolor/theme.lu
 -- common
 modkey     = "Mod4"
 altkey     = "Mod1"
-terminal   = "gnome-terminal"
-editor     = os.getenv("EDITOR") or "vi"
+terminal   = "urxvtc" or "xterm"
+editor     = os.getenv("EDITOR") or "nano" or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
-browser    = "firefox"
-browser2   = "chromium"
+browser    = "dwb"
+browser2   = "iron"
 gui_editor = "gvim"
 graphics   = "gimp"
 mail       = terminal .. " -e mutt "
@@ -87,8 +85,7 @@ local layouts = {
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
 }
--- }}} end Variable definition
-
+-- }}}
 
 -- {{{ Tags
 tags = {
@@ -99,7 +96,7 @@ for s = 1, screen.count() do
 -- Each screen has its own tag table.
    tags[s] = awful.tag(tags.names, s, tags.layout)
 end
--- }}} end tags
+-- }}}
 
 -- {{{ Wallpaper
 if beautiful.wallpaper then
@@ -107,18 +104,18 @@ if beautiful.wallpaper then
         gears.wallpaper.maximized(beautiful.wallpaper, s, true)
     end
 end
--- }}} end Wallpaper
+-- }}}
 
 -- {{{ Freedesktop Menu
 require("freedesktop/freedesktop")
--- }}} end Freedesktop Menu
+-- }}}
 
 -- {{{ Wibox
 markup      = lain.util.markup
 
 -- Textclock
 clockicon = wibox.widget.imagebox(beautiful.widget_clock)
-mytextclock = awful.widget.textclock(markup("#7788af", "%A %d %B ") .. markup("#343639", ">") .. markup("#de5e1e", " %I:%M "))
+mytextclock = awful.widget.textclock(markup("#7788af", "%A %d %B ") .. markup("#343639", ">") .. markup("#de5e1e", " %H:%M "))
 
 -- Calendar
 lain.widgets.calendar:attach(mytextclock, { font_size = 10 })
@@ -250,8 +247,7 @@ mpdwidget = lain.widgets.mpd({
 -- Spacer
 spacer = wibox.widget.textbox(" ")
 
--- }}} end Wibox
-
+-- }}}
 
 -- {{{ Layout
 

@@ -4,3 +4,9 @@
 [submodule "vim-settings/vim/bundle/vim-colors-solarized"]
 	path = vim-settings/vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim-settings/vim/bundle/python-mode"]
+	path = vim-settings/vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git
+[submodule "xorg/aw/lain"]
+	path = xorg/aw/lain
+	url = https://github.com/copycat-killer/lain.git
