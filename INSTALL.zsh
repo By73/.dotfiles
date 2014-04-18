@@ -9,7 +9,7 @@ export PYTHONPATH=$PYTHONPATH:$DIR/lib/python
 git submodule init
 git submodule update
 
-ln -sf $DIR/env-settings/vim/ $HOME/.vim
+ln -sf $DIR/env-settings/vim $HOME/.vim/
 ln -sf $DIR/env-settings/tmux.conf $HOME/.tmux.conf
 ln -sf $DIR/env-settings/vimrc $HOME/.vimrc
 
@@ -21,5 +21,5 @@ for rcfile in $PREZTO/runcoms/^README.md(.N); do
 done
 
 # theme for Awesome wm
-ln -s $DIR/xorg/aw $HOME/.config/awesome/
+ln -sf $DIR/xorg/aw $HOME/.config/awesome/
 
