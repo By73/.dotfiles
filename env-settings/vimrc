@@ -34,10 +34,6 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
-" ================ Paths =================
-
-set rtp+=$HOME/.dotfiles/env-settings/powerline/bindings/vim
-
 " ================ Turn Off Swap Files ==============
 
 set noswapfile

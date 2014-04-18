@@ -10,3 +10,6 @@
 [submodule "xorg/aw/lain"]
 	path = xorg/aw/lain
 	url = https://github.com/copycat-killer/lain.git
+[submodule "env-settings/vim/bundle/lightline"]
+	path = env-settings/vim/bundle/lightline
+	url = https://github.com/itchyny/lightline.vim

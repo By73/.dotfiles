@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation on Linux &mdash; Powerline beta documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="top" title="Powerline beta documentation" href="../index.html"/>
+ 
+<!-- RTD Extra Head -->
+
+
+
+<!-- 
+Read the Docs is acting as the canonical URL for your project. 
+If you want to change it, more info is available in our docs:
+  http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://powerline.readthedocs.org/en/latest/installation/linux.html" />
+
+<script type="text/javascript">
+  // This is included here because other places don't have access to the pagename variable.
+  var READTHEDOCS_DATA = {
+    project: "powerline",
+    version: "latest",
+    language: "en",
+    page: "installation/linux",
+    theme: "sphinx_rtd_theme",
+    docroot: "/docs/source/",
+    api_host: "https://readthedocs.org"
+  }
+  // Old variables
+  var doc_version = "latest";
+  var doc_slug = "powerline";
+  var page_name = "installation/linux";
+  var html_theme = "sphinx_rtd_theme";
+</script>
+<!-- RTD Analytics Code -->
+<!-- Included in the header because you don't have a footer block. -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17997319-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- end RTD Analytics Code -->
+
+
+<!-- end RTD <extrahead> -->
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> Powerline</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#screenshots">Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#feature-highlights">Feature highlights</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#quick-setup-guide">Quick setup guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#main-configuration">Main configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#color-definitions">Color definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#colorschemes">Colorschemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#themes">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#segments">Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#local-configuration">Local configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tipstricks.html">Tips &amp; Tricks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tipstricks.html#vim">Vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tipstricks.html#terminus-font-and-urxvt">Terminus font and urxvt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fontpatching.html">Font patching</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../fontpatching.html#glyph-table">Glyph table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fontpatching.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license-credits.html">License and credits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license-credits.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license-credits.html#credits">Credits</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../segments/common.html">Common segments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../segments/shell.html">Shell segments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../segments/vim.html">Vim segments</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Powerline</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Installation on Linux</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="https://github.com/Lokaltog/powerline/blob/develop/docs/source/installation/linux.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="installation-on-linux">
+<span id="installation-linux"></span><h1>Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Permalink to this headline">¶</a></h1>
+<p>The following distribution-specific packages are officially supported, and
+they provide an easy way of installing and upgrading Powerline. The packages
+will automatically do most of the configuration for you, but you should
+still skim through this guide so you know how the plugin works.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://aur.archlinux.org/packages/python2-powerline-git/">Arch Linux (AUR), Python 2 version</a></li>
+<li><a class="reference external" href="https://aur.archlinux.org/packages/python-powerline-git/">Arch Linux (AUR), Python 3 version</a></li>
+<li>Gentoo Live ebuild in <a class="reference external" href="https://github.com/leycec/raiagent">raiagent</a> overlay</li>
+</ul>
+<p>If you&#8217;re running a distribution without an official package you&#8217;ll have to
+follow the installation guide below:</p>
+<div class="section" id="plugin-installation">
+<h2>Plugin installation<a class="headerlink" href="#plugin-installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Install Python 3.2+ or Python 2.6+.</p>
+</li>
+<li><p class="first">Install Powerline using the following command:</p>
+<div class="highlight-python"><pre>pip install --user git+git://github.com/Lokaltog/powerline</pre>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need to use the GitHub URI when installing Powerline! This
+project is currently unavailable on the PyPI due to a naming conflict
+with an unrelated project.</p>
+</div>
+</div>
+<div class="section" id="font-installation">
+<h2>Font installation<a class="headerlink" href="#font-installation" title="Permalink to this headline">¶</a></h2>
+<p>Powerline provides two ways of installing the required fonts on Linux. The
+recommended method is using <tt class="docutils literal"><span class="pre">fontconfig</span></tt> if your terminal emulator
+supports it. See the <a class="reference internal" href="../overview.html#term-feature-support-matrix"><em>Application/terminal emulator feature support matrix</em></a> for details about
+what features your terminal emulator supports.</p>
+<div class="section" id="fontconfig">
+<h3>Fontconfig<a class="headerlink" href="#fontconfig" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Download the <a class="reference external" href="https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf">latest version of PowerlineSymbols</a>
+and the <a class="reference external" href="https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf">latest version of the fontconfig file</a>.</li>
+<li>Move <tt class="file docutils literal"><span class="pre">PowerlineSymbols.otf</span></tt> to <tt class="file docutils literal"><span class="pre">~/.fonts/</span></tt> (or another X font
+directory).</li>
+<li>Run <tt class="docutils literal"><span class="pre">fc-cache</span> <span class="pre">-vf</span> <span class="pre">~/.fonts</span></tt> to update your font cache.</li>
+<li>Move <tt class="file docutils literal"><span class="pre">10-powerline-symbols.conf</span></tt> to either <tt class="file docutils literal"><span class="pre">~/.fonts.conf.d/</span></tt>
+or <tt class="file docutils literal"><span class="pre">~/.config/fontconfig/conf.d/</span></tt>, depending on your fontconfig
+version.</li>
+<li>If you don&#8217;t see the arrow symbols, please close all instances of your
+terminal emulator or gvim. You may also have to restart X for the changes
+to take effect. If you <em>still</em> don&#8217;t see the arrow symbols, please submit
+an issue on GitHub.</li>
+</ol>
+</div>
+<div class="section" id="patched-font">
+<h3>Patched font<a class="headerlink" href="#patched-font" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Download the font of your choice from <a class="reference external" href="https://github.com/Lokaltog/powerline-fonts">powerline-fonts</a>. If you can&#8217;t
+find your preferred font in the <a class="reference external" href="https://github.com/Lokaltog/powerline-fonts">powerline-fonts</a> repo, you&#8217;ll have to
+patch your own font instead. See <a class="reference internal" href="../fontpatching.html#font-patching"><em>Font patching</em></a> for instructions.</li>
+<li>Move your patched font to <tt class="file docutils literal"><span class="pre">~/.fonts/</span></tt> (or another X font
+directory).</li>
+<li>Run <tt class="docutils literal"><span class="pre">fc-cache</span> <span class="pre">-vf</span> <span class="pre">~/.fonts</span></tt> to update your font cache.</li>
+<li>Update Gvim or your terminal emulator to use the patched font. (the
+correct font usually ends with <em>for Powerline</em>).</li>
+<li>If you don&#8217;t see the arrow symbols, please close all instances of your
+terminal emulator or gvim. You may also have to restart X for the changes
+to take effect. If you <em>still</em> don&#8217;t see the arrow symbols, please submit
+an issue on GitHub.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#i-can-t-see-any-fancy-symbols-what-s-wrong" id="id2">I can&#8217;t see any fancy symbols, what&#8217;s wrong?</a></li>
+<li><a class="reference internal" href="#the-fancy-symbols-look-a-bit-blurry-or-off" id="id3">The fancy symbols look a bit blurry or &#8220;off&#8221;!</a></li>
+<li><a class="reference internal" href="#i-m-using-tmux-and-powerline-looks-like-crap-what-s-wrong" id="id4">I&#8217;m using tmux and Powerline looks like crap, what&#8217;s wrong?</a></li>
+<li><a class="reference internal" href="#im-using-tmux-screen-and-powerline-is-colorless" id="id5">I’m using tmux/screen and Powerline is colorless</a></li>
+<li><a class="reference internal" href="#after-an-update-something-stopped-working" id="id6">After an update something stopped working</a></li>
+<li><a class="reference internal" href="#my-vim-statusline-has-strange-characters-like-b-in-it" id="id7">My vim statusline has strange characters like <tt class="docutils literal"><span class="pre">^B</span></tt> in it!</a></li>
+<li><a class="reference internal" href="#my-vim-statusline-has-a-lot-of-or-underline-characters-in-it" id="id8">My vim statusline has a lot of <tt class="docutils literal"><span class="pre">^</span></tt> or underline characters in it!</a></li>
+<li><a class="reference internal" href="#my-vim-statusline-is-hidden-only-appears-in-split-windows" id="id9">My vim statusline is hidden/only appears in split windows!</a></li>
+<li><a class="reference internal" href="#my-vim-statusline-is-not-displayed-completely-and-has-too-much-spaces" id="id10">My vim statusline is not displayed completely and has too much spaces</a></li>
+<li><a class="reference internal" href="#when-using-z-powerline-shows-wrong-number-of-jobs" id="id11">When using z powerline shows wrong number of jobs</a></li>
+</ul>
+</div>
+<div class="section" id="i-can-t-see-any-fancy-symbols-what-s-wrong">
+<h3><a class="toc-backref" href="#id2">I can&#8217;t see any fancy symbols, what&#8217;s wrong?</a><a class="headerlink" href="#i-can-t-see-any-fancy-symbols-what-s-wrong" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Make sure that you&#8217;ve configured gvim or your terminal emulator to use
+a patched font (see <a class="reference internal" href="../fontpatching.html#font-patching"><em>Font patching</em></a>).</li>
+<li>You need to set your <tt class="docutils literal"><span class="pre">LANG</span></tt> and <tt class="docutils literal"><span class="pre">LC_*</span></tt> environment variables to
+a UTF-8 locale (e.g. <tt class="docutils literal"><span class="pre">LANG=en_US.utf8</span></tt>). Consult your Linux distro&#8217;s
+documentation for information about setting these variables correctly.</li>
+<li>Make sure that vim is compiled with the <tt class="docutils literal"><span class="pre">--with-features=big</span></tt> flag.</li>
+<li>If you&#8217;re using rxvt-unicode, make sure that it&#8217;s compiled with the
+<tt class="docutils literal"><span class="pre">--enable-unicode3</span></tt> flag.</li>
+</ul>
+</div>
+<div class="section" id="the-fancy-symbols-look-a-bit-blurry-or-off">
+<h3><a class="toc-backref" href="#id3">The fancy symbols look a bit blurry or &#8220;off&#8221;!</a><a class="headerlink" href="#the-fancy-symbols-look-a-bit-blurry-or-off" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Make sure that you have patched all variants of your font (i.e. both the
+regular and the bold font files).</li>
+</ul>
+</div>
+<div class="section" id="i-m-using-tmux-and-powerline-looks-like-crap-what-s-wrong">
+<h3><a class="toc-backref" href="#id4">I&#8217;m using tmux and Powerline looks like crap, what&#8217;s wrong?</a><a class="headerlink" href="#i-m-using-tmux-and-powerline-looks-like-crap-what-s-wrong" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">You need to tell tmux that it has 256-color capabilities. Add this to your
+<tt class="file docutils literal"><span class="pre">.tmux.conf</span></tt> to solve this issue:</p>
+<div class="highlight-python"><pre>set -g default-terminal "screen-256color"</pre>
+</div>
+</li>
+<li><p class="first">If you&#8217;re using iTerm2, make sure that you have enabled the setting
+<em class="guilabel">Set locale variables automatically</em> in <em class="menuselection">Profiles
+‣ Terminal ‣ Environment</em>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="im-using-tmux-screen-and-powerline-is-colorless">
+<h3><a class="toc-backref" href="#id5">I’m using tmux/screen and Powerline is colorless</a><a class="headerlink" href="#im-using-tmux-screen-and-powerline-is-colorless" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>If the above advices do not help, then you need to disable
+<a class="reference internal" href="../configuration.html#config-common-term-truecolor"><em>term_truecolor</em></a>.</li>
+<li>Alternative: set <a class="reference internal" href="../configuration.html#config-common-additional-escapes"><em>additional_escapes</em></a>
+to <tt class="docutils literal"><span class="pre">&quot;tmux&quot;</span></tt> or <tt class="docutils literal"><span class="pre">&quot;screen&quot;</span></tt>. Note that it is known to work perfectly in
+screen, but in tmux it may produce ugly spaces.</li>
+</ul>
+</div>
+<div class="section" id="after-an-update-something-stopped-working">
+<h3><a class="toc-backref" href="#id6">After an update something stopped working</a><a class="headerlink" href="#after-an-update-something-stopped-working" title="Permalink to this headline">¶</a></h3>
+<p>Assuming powerline was working before update and stopped only after there are
+two possible explanations:</p>
+<ul class="simple">
+<li>You have more then one powerline installation (e.g. <tt class="docutils literal"><span class="pre">pip</span></tt> and <tt class="docutils literal"><span class="pre">Vundle</span></tt>
+installations) and you have updated only one.</li>
+<li>Update brought some bug to powerline.</li>
+</ul>
+<p>In the second case you, of course, should report the bug to <a class="reference external" href="https://github.com/Lokaltog/powerline">powerline bug
+tracker</a>.  In the first you should make
+sure you either have only one powerline installation or you update all of them
+simultaneously (beware that in the second case you are not supported). To
+diagnose this problem you may do the following:</p>
+<ol class="arabic">
+<li><p class="first">If this problem is observed within the shell make sure that</p>
+<div class="highlight-shell"><pre>python -c 'import powerline; print (powerline.__file__)'</pre>
+</div>
+<p>which should report something like
+<tt class="file docutils literal"><span class="pre">/usr/lib64/python2.7/site-packages/powerline/__init__.pyc</span></tt> (if
+powerline is installed system-wide) or
+<tt class="file docutils literal"><span class="pre">/home/USER/.../powerline/__init__.pyc</span></tt> (if powerline was cloned
+somewhere, e.g. in <tt class="file docutils literal"><span class="pre">/home/USER/.vim/bundle/powerline</span></tt>) reports the same
+location you use to source in your shell configuration: in first case it
+should be some location in <tt class="file docutils literal"><span class="pre">/usr</span></tt> (e.g.
+<tt class="file docutils literal"><span class="pre">/usr/share/zsh/site-contrib/powerline.zsh</span></tt>), in the second it should
+be something like
+<tt class="file docutils literal"><span class="pre">/home/USER/.../powerline/bindings/zsh/powerline.zsh</span></tt>. If this is true
+it may be a powerline bug, but if locations do not match you should not
+report the bug until you observe it on configuration where locations do
+match.</p>
+</li>
+<li><p class="first">If this problem is observed within the vim instance you should check out the
+output of the following Ex mode commands</p>
+<div class="highlight-vim"><div class="highlight"><pre>python import powerline <span class="k">as</span> pl ; print <span class="p">(</span>pl.__file__<span class="p">)</span>
+<span class="k">python3</span> import powerline <span class="k">as</span> pl ; print <span class="p">(</span>pl.__file__<span class="p">)</span>
+</pre></div>
+</div>
+<p>One (but not both) of them will most likely error out, this is OK. The same
+rules apply as in the 1), but in place of sourcing you should seek for the
+place where you modify <cite>runtimepath</cite> vim option. If you install powerline
+using <a class="reference external" href="https://github.com/MarcWeber/vim-addon-manager">VAM</a> then no
+explicit modifications of runtimpath were performed in your vimrc
+(runtimepath is modified by VAM in this case), but powerline will be placed
+in <tt class="file docutils literal"><em><span class="pre">plugin_root_dir</span></em><span class="pre">/powerline</span></tt> where <cite>{plugin_root_dir}</cite> is stored in
+VAM settings dictionary: do <cite>echo g:vim_addon_manager.plugin_root_dir</cite>.</p>
+</li>
+</ol>
+<p>There is a hint if you want to place powerline repository somewhere, but still
+make powerline package importable anywhere: use</p>
+<blockquote>
+<div><div class="highlight-shell"><pre>pip install --user --editable path/to/powerline</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="my-vim-statusline-has-strange-characters-like-b-in-it">
+<h3><a class="toc-backref" href="#id7">My vim statusline has strange characters like <tt class="docutils literal"><span class="pre">^B</span></tt> in it!</a><a class="headerlink" href="#my-vim-statusline-has-strange-characters-like-b-in-it" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Please add <tt class="docutils literal"><span class="pre">set</span> <span class="pre">encoding=utf-8</span></tt> to your <tt class="file docutils literal"><span class="pre">vimrc</span></tt>.</li>
+</ul>
+</div>
+<div class="section" id="my-vim-statusline-has-a-lot-of-or-underline-characters-in-it">
+<h3><a class="toc-backref" href="#id8">My vim statusline has a lot of <tt class="docutils literal"><span class="pre">^</span></tt> or underline characters in it!</a><a class="headerlink" href="#my-vim-statusline-has-a-lot-of-or-underline-characters-in-it" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">You need to configure the <tt class="docutils literal"><span class="pre">fillchars</span></tt> setting to disable statusline
+fillchars (see <tt class="docutils literal"><span class="pre">:h</span> <span class="pre">fillchars</span></tt> for details). Add this to your
+<tt class="file docutils literal"><span class="pre">vimrc</span></tt> to solve this issue:</p>
+<blockquote>
+<div><div class="highlight-vim"><div class="highlight"><pre><span class="k">set</span> <span class="nb">fillchars</span><span class="p">+=</span><span class="nb">stl</span>:\ <span class="p">,</span>stlnc:\
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="my-vim-statusline-is-hidden-only-appears-in-split-windows">
+<h3><a class="toc-backref" href="#id9">My vim statusline is hidden/only appears in split windows!</a><a class="headerlink" href="#my-vim-statusline-is-hidden-only-appears-in-split-windows" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Make sure that you have <tt class="docutils literal"><span class="pre">set</span> <span class="pre">laststatus=2</span></tt> in your <tt class="file docutils literal"><span class="pre">vimrc</span></tt>.</li>
+</ul>
+</div>
+<div class="section" id="my-vim-statusline-is-not-displayed-completely-and-has-too-much-spaces">
+<h3><a class="toc-backref" href="#id10">My vim statusline is not displayed completely and has too much spaces</a><a class="headerlink" href="#my-vim-statusline-is-not-displayed-completely-and-has-too-much-spaces" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Be sure you have <tt class="docutils literal"><span class="pre">ambiwidth</span></tt> option set to <tt class="docutils literal"><span class="pre">single</span></tt>.</li>
+<li>Alternative: set <a class="reference internal" href="../configuration.html#config-common-ambiwidth"><em>ambiwidth</em></a> to 2, remove fancy
+dividers (they suck when <tt class="docutils literal"><span class="pre">ambiwidth</span></tt> is set to double).</li>
+</ul>
+</div>
+<div class="section" id="when-using-z-powerline-shows-wrong-number-of-jobs">
+<h3><a class="toc-backref" href="#id11">When using z powerline shows wrong number of jobs</a><a class="headerlink" href="#when-using-z-powerline-shows-wrong-number-of-jobs" title="Permalink to this headline">¶</a></h3>
+<p>This happens because <a class="reference external" href="https://github.com/rupa/z">z</a> is launching some jobs in
+the background from <tt class="docutils literal"><span class="pre">$POWERLINE_COMMAND</span></tt> and these jobs fail to finish before
+powerline prompt is run.</p>
+<p>Solution to this problem is simple: be sure that <tt class="file docutils literal"><span class="pre">z.sh</span></tt> is sourced
+strictly after <tt class="file docutils literal"><span class="pre">powerline/bindings/bash/powerline.sh</span></tt>. This way background
+jobs are spawned by <a class="reference external" href="https://github.com/rupa/z">z</a> after powerline has done
+its job.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Kim Silkebækken.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/en/latest/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="https://media.readthedocs.org/pdf/powerline/latest/powerline.pdf">PDF</a></dd>
+        
+          <dd><a href="https://media.readthedocs.org/htmlzip/powerline/latest/powerline.zip">HTML</a></dd>
+        
+          <dd><a href="https://media.readthedocs.org/epub/powerline/latest/powerline.epub">Epub</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/powerline/?fromdocs=powerline">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/powerline/?fromdocs=powerline">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+
+    </div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/underscore.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/doctools.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-doc-embed.js"></script>
+
+  
+
+  
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
