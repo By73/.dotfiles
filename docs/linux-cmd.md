@@ -1,6 +1,6 @@
-====
 xorg
 ====
-. remap shift to ctrl
-  setxkbmap -option ctrl:nocaps
+| cmd | example | details |
+|-----|---------|---------|
+|setxkbmap | setxkbmap -option ctrl:nocaps | remap caps lock to ctrl |
 
