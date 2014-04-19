@@ -36,7 +36,8 @@ do
         in_error = false
     end)
 end
--- }}}
+-- }}} end Error handling
+--
 
 -- {{{ Autostart applications
 function run_once(cmd)
@@ -85,11 +86,11 @@ local layouts = {
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
 }
--- }}}
+-- }}} end Variable definitions
 
 -- {{{ Tags
 tags = {
-   names = { "web", "term", "docs", "media", "files", "other" },
+   names = { "www", "term", "docs", "media", "files", "other" },
    layout = { layouts[1], layouts[3], layouts[4], layouts[1], layouts[7], layouts[1] }
 }
 for s = 1, screen.count() do
@@ -192,13 +193,14 @@ netupinfo = lain.widgets.net({
     end
 })
 
--- MEM
+--[[ MEM
 memicon = wibox.widget.imagebox(beautiful.widget_mem)
 memwidget = lain.widgets.mem({
     settings = function()
         widget:set_markup(markup("#e0da37", mem_now.used .. "M "))
     end
 })
+--]]
 
 --[[ MPD
 mpdicon = wibox.widget.imagebox()

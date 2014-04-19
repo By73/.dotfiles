@@ -1,4 +1,6 @@
 alias hibernate='sudo pm-hibernate'
+alias shutdown='systemctl shutdown -i'
+alias reboot='systemctl reboot -i'
 alias rsrc='source $HOME/.zshrc'
 
 ########
