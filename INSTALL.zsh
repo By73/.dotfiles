@@ -11,7 +11,7 @@ git submodule update
 
 ln -sf $DIR/env-settings/vim $HOME/.vim
 ln -sf $DIR/env-settings/tmux.conf $HOME/.tmux.conf
-ln -sf $DIR/env-settings/vimrc $HOME/.vimrc
+ln -sf $DIR/env-settings/vim/vim-settings/vimrc $HOME/.vimrc
 
 ln -sf $PREZTO $HOME/.zprezto
 
