@@ -12,7 +12,6 @@ Installation
         
   2. Clone the repository:
           
-        cd ~
         git clone https://github.com/By73/.dotfiles.git $HOME/.dotfiles
           
   3. Run the installation script:
