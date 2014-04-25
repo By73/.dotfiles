@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+charge_file = open('/sys/class/power_supply/BAT1/charge_now','r')
+charge_full_file = open('/sys/class/power_supply/BAT1/charge_full','r')
+
+charge = charge_file.read()
+max_charge = charge_full_file.read()
+
+bat_lvl = "{0:.2f}".format(float(charge)/float(max_charge) * 100)
+
+print(str(bat_lvl) + '%')
