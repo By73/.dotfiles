@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/test/.dotfiles/xorg/aw/lain/widgets/yawn/localizations'
+let g:netrw_dirhist_2='/usr/share/vim'
+let g:netrw_dirhist_3='/usr/share/vim/vim74'
+let g:netrw_dirhist_4='/home/raviko/.dotfiles/env-settings/vim/bundle/python-mode/doc'

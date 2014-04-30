@@ -1,11 +1,23 @@
 #!/usr/bin/python
 
-charge_file = open('/sys/class/power_supply/BAT1/charge_now','r')
+charge_file      = open('/sys/class/power_supply/BAT1/charge_now','r')
 charge_full_file = open('/sys/class/power_supply/BAT1/charge_full','r')
+current_file     = open('/sys/class/power_supply/BAT1/current_now', 'r')
+voltage_file     = open('/sys/class/power_supply/BAT1/voltage_now', 'r')
 
-charge = charge_file.read()
-max_charge = charge_full_file.read()
+charge_now           = charge_file.read()
+max_charge       = charge_full_file.read()
+voltage_now          = voltage_file.read()
+current_now          = current_file.read()
 
-bat_lvl = "{0:.2f}".format(float(charge)/float(max_charge) * 100)
+bat_lvl  = "{0:.2f}".format(float(charge_now)/float(max_charge) * 100)
 
-print(str(bat_lvl) + '%')
+time_val = (float(charge_now) * 1e-5 / \
+           (float(current_now) * float(voltage_now) * 1e-12))
+
+hours    = int(time_val)
+mins     = "{0:.0f}".format((float(time_val) - int(hours)) * 60)
+
+time_est = str(hours) + ':' + str(mins)
+
+print(str(bat_lvl) + '%, ' + str(time_est) + ' Hours:Mins remaining')
