@@ -59,3 +59,8 @@ function! MyFugitive()
   endif
     return ''
 endfunction
+
+"""""""""""""""
+" File specific
+"""""""""""""""
+
