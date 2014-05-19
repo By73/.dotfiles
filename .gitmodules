@@ -7,9 +7,6 @@
 [submodule "vim-settings/vim/bundle/python-mode"]
 	path = env-settings/vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
-[submodule "xorg/aw/lain"]
-	path = xorg/aw/lain
-	url = https://github.com/copycat-killer/lain.git
 [submodule "env-settings/vim/bundle/lightline"]
 	path = env-settings/vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim
