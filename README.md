@@ -16,8 +16,8 @@ Installation
           
   3. Run the installation script:
   
-        cd $HOME/.dotfiles
-        chmod +x INSTALL.zsh
+        cd $HOME/.dotfiles \
+        chmod +x INSTALL.zsh \
         ./INSTALL.zsh
           
   4. Set Zsh as your default shell:
