@@ -2,7 +2,7 @@ alias hibernate='sudo pm-hibernate'
 alias shutdown='sudo systemctl shutdown -i'
 alias reboot='sudo systemctl reboot -i'
 alias rsrc='source $HOME/.zshrc'
-alias free='free -m'
+alias free='free -m -h'
 
 ########
 # Pacman
